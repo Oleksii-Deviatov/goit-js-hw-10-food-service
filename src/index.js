@@ -15,15 +15,9 @@ const Theme = {
 
 const theme = localStorage.getItem("theme");
 
-if (!theme) {
-  refs.body.classList.add(Theme.LIGHT);
-} else {
-  refs.body.classList.add(theme);
-}
+refs.body.classList.add(!theme ? Theme.LIGHT : theme);
 
-if (theme === "dark-theme") {
-  refs.themeSwitch.checked = true;
-}
+refs.themeSwitch.checked = theme === "dark-theme" ? true : false;
 
 markupGallery(menu);
 
