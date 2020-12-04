@@ -26,7 +26,7 @@ function markupGallery(data) {
   refs.menu.insertAdjacentHTML("beforeend", markup);
 }
 
-refs.themeSwitch.addEventListener("input", switchHendler);
+refs.themeSwitch.addEventListener("change", switchHendler);
 
 function switchHendler() {
   refs.body.classList.toggle(Theme.DARK);
